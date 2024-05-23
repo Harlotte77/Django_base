@@ -16,8 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.urls.converters import register_converter
+from book.utils.converters import MobileConverter
+
+register_converter(MobileConverter, 'mobile')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('book/', include('book.urls'))
+    path('book/', include('book.urls')),
 ]
+
+

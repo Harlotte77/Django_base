@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一个vue</title>
+    <!--
+     第一步：导入vue.js
+     第二步：定义一个标签，来接管标签中的内容，如下面body中的div
+     第三步：创建vue实例，让vue实例获取HTML
+     -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    {{ message }}
+</div>
+<script type="text/javascript">
+    /*
+    var app指的是定义一个变量
+    new Vue()指的是实例化
+    el: '#app'相当于js中的document.getElementById('app')
+    data指的是变量
+     */
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'hello vue'
+        }
+    })
+</script>
+</body>
+</html>
